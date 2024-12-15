@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List | Dark Theme</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/main.js" defer type="module"></script>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>📝 To-Do List</h1>
+        <p class="subtitle">Organisez vos tâches efficacement.</p>
+    </header>
+    <main class="main">
+        <!-- Formulaire pour ajouter une tâche -->
+        <section class="add-todo-section">
+            <h2>Ajouter une tâche</h2>
+            <form id="todo-form" class="todo-form">
+                <input
+                        type="text"
+                        id="todo-input"
+                        placeholder="Entrez une nouvelle tâche..."
+                        required
+                />
+            </form>
+        </section>
+
+        <!-- Recherche et filtres -->
+        <section class="filters-section">
+            <div class="search-bar">
+                <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Rechercher une tâche..."
+                />
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="en-cours">En cours</button>
+                <button class="filter-btn" data-filter="termine">Terminées</button>
+            </div>
+        </section>
+
+        <!-- Liste des tâches -->
+        <section class="todo-section">
+            <h2>Vos tâches</h2>
+            <ul id="todo-list" class="todo-list">
+                <!-- Les éléments seront insérés dynamiquement via JavaScript -->
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Made with ❤️ | <a href="https://jsonplaceholder.typicode.com/">API JSONPlaceholder</a></p>
+    </footer>
+</div>
+</body>
+</html>
