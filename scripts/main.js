@@ -9,9 +9,9 @@ async function main() {
     const todos = await getTodos()
     const fullTodos =[...todos]
 
-    await createListTodos(todos)
+    createListTodos(todos)
 
-    await initListeners(todos, fullTodos)
+    initListeners(todos, fullTodos)
 }
 
 main()

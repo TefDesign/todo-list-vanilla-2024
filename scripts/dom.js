@@ -5,7 +5,7 @@ import {actionsTodo, addTodo, filters, searchTodos} from "./actions.js";
  * @param todos Objet qui contient l'ensemble des todos
  * @returns {Promise<void>}
  */
-export async function createListTodos(todos) {
+export function createListTodos(todos) {
     const ul = document.querySelector("#todo-list");
     ul.innerHTML = "";
 
@@ -62,7 +62,7 @@ function createEl(tag, content, class_name="") {
  * @param fullTodos Objet qui contient l'ensemble des todos originaux sans modification
  * @returns {Promise<void>}
  */
-export async function initListeners(todos, fullTodos) {
+export function initListeners(todos, fullTodos) {
     const form = document.querySelector("#todo-form")
     form.addEventListener("keypress", e => addTodo(e, fullTodos))
 
